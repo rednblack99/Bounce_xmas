@@ -12,7 +12,7 @@
     </form>
     <% @messages.reverse.each do |message| %>
       <div>
-        <%= message.content %> | <%= message.time %>
+        <%= message.created_at %>: <a href=<%="/messages/#{message.id}"%>><%= message.content %></a> 
       </div>
     <% end %>
   </body>

@@ -28,15 +28,14 @@ RSpec.feature 'Messages' do
     end
   end
 
-  xcontext 'Seeing a message' do
+  context 'Seeing a message' do
     scenario 'click on a message shows the full text of the message' do
+      message = Message.create(content: "A fancy message!")
+
       visit '/'
-      fill_in :content, with: 'A message!'
-      click_button 'Create'
-      id = find()
-      click 'A message!'
-      expect(page.current_path).to eq('/messages/' + id)
-      expect(page).to have_content('A message!')
+      click_on 'A fancy message!'
+      expect(page.current_path).to eq("/messages/#{message.id}")
+      expect(page).to have_content('A fancy message!')
     end
   end
 end
