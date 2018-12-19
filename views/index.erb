@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>A MESSAGE APP</h1>
+    <form action="/message" method="post">
+      <input type="text" name="content">
+      <input type="submit" value="Create">
+    </form>
+    <% @messages.reverse.each do |message| %>
+      <div>
+        <%= message.content %> | <%= message.time %>
+      </div>
+    <% end %>
+  </body>
+</html>
