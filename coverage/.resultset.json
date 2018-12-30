@@ -1,0 +1,71 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/full_message_spec.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/home_spec.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/testing_infrastructure_spec.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1546181126
+  }
+}

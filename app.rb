@@ -1,4 +1,6 @@
-ENV["RACK_ENV"] ||= 'development'
+# frozen_string_literal: true
+
+ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
 require './lib/message'
@@ -6,7 +8,8 @@ require './config/data_mapper'
 
 require 'pry'
 
-class MessageApp < Sinatra::Base
+# Runs web app
+class Bounce < Sinatra::Base
   set :sessions, true
 
   get '/' do
@@ -15,13 +18,13 @@ class MessageApp < Sinatra::Base
     erb(:index)
   end
 
-  post '/message' do
-    Message.create(content: params[:content])
+  post '/send_message' do
+    Message.create(content: params[:message])
 
     redirect '/'
   end
 
-  get '/messages/:id' do
+  get '/full_message/:id' do
     @message = Message.get(params[:id])
 
     erb(:show)

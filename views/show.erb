@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>A MESSAGE APP</h1>
-      <div>
-        <%= @message.created_at %>: <span><%= @message.content %></span>
-      </div>
-  </body>
-</html>
+<h1>Here is the full message:</h1>
+
+<div>
+  <%= @message.display_time %>: <span><%= @message.content %></span>
+</div>

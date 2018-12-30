@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>A MESSAGE APP</h1>
-    <form action="/message" method="post">
-      <input type="text" name="content">
-      <input type="submit" value="Create">
-    </form>
+<h1>Welcome to Bounce</h1>
+<img src="https://media.giphy.com/media/LpALgGQNZLzdm/giphy.gif" alt="Bouncy" height="300">
+
+<body>
     <% @messages.reverse.each do |message| %>
       <div>
-        <%= message.created_at %>: <a href=<%="/messages/#{message.id}"%>><%= message.content %></a> 
+        <%= message.display_time %>: <a href=<%="/full_message/#{message.id}"%>><%= message.preview %></a> 
       </div>
     <% end %>
+
+    <form action="/send_message" method="post">
+      <input type="text" name="message">
+      <input type="submit" value="Send">
+    </form>
   </body>
-</html>

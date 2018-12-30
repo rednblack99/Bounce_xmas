@@ -1,7 +1,19 @@
-ENV["RACK_ENV"] ||= 'test'
+# frozen_string_literal: true
+
+ENV['RACK_ENV'] ||= 'test'
 
 require 'capybara/rspec'
-require './app'
+require_relative '../app'
+require 'features/web_helpers'
 
+require 'simplecov'
+require 'simplecov-console'
 
-Capybara.app = MessageApp
+Capybara.app = Bounce
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+SimpleCov::Formatter::Console,
+  # Want a nice code coverage website? Uncomment this next line!
+  # SimpleCov::Formatter::HTMLFormatter
+])
+SimpleCov.start
