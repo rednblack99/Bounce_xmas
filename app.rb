@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
@@ -10,8 +8,8 @@ require 'pry'
 
 # Runs web app
 class Bounce < Sinatra::Base
-  set :sessions, true
-
+  use Rack::Session::Cookie, :key => "rack.session", :path => "/backend"
+  
   get '/' do
     @messages = Message.all
 
@@ -25,8 +23,29 @@ class Bounce < Sinatra::Base
   end
 
   get '/full_message/:id' do
-    @message = Message.get(params[:id])
-
-    erb(:show)
+    $message = Message.get(params[:id])
+    @message = $message
+    # session[:message] = Message.get)params[:id])
+    # @message = session[:message]
+    erb(:full_message)
   end
+
+  get '/edit_message' do
+    erb(:edit_message)
+  end
+
+  post '/update_message' do
+    # session[:message].update(content: params[:message])
+    $message.update(content: params[:message])
+
+    redirect '/'
+  end
+
+  post '/delete' do
+    # session[:message].destroy
+    $message.destroy
+
+    redirect '/'
+  end
+
 end

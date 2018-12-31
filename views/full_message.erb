@@ -1,0 +1,16 @@
+<h1>Here is the full message:</h1>
+
+<p>
+  <%= @message.display_time %>: <span><%= @message.content %></span>
+</p>
+
+<p>
+  <form action="/edit_message" method="get">
+    <input type="submit" value="Edit">
+  </form>
+
+  <form action="/delete" method="post">
+    <input type="submit" value="Delete message?">
+  </form>
+</p>
+

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'data_mapper'
 
 # Creates the table of stored messages
