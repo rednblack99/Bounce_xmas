@@ -5,11 +5,11 @@
 </p>
 
 <p>
-  <form action="/edit_message" method="get">
+  <form action=<%="/edit_message/#{@message.id}"%> method="get">
     <input type="submit" value="Edit">
   </form>
 
-  <form action="/delete" method="post">
+  <form action=<%="/delete/#{@message.id}"%> method="post">
     <input type="submit" value="Delete message?">
   </form>
 </p>

@@ -23,27 +23,25 @@ class Bounce < Sinatra::Base
   end
 
   get '/full_message/:id' do
-    $message = Message.get(params[:id])
-    @message = $message
-    # session[:message] = Message.get)params[:id])
-    # @message = session[:message]
+    @message = Message.get(params[:id])
     erb(:full_message)
   end
 
-  get '/edit_message' do
+  get '/edit_message/:id' do
+    @message = Message.get(params[:id])
     erb(:edit_message)
   end
 
-  post '/update_message' do
-    # session[:message].update(content: params[:message])
-    $message.update(content: params[:message])
+  post '/update_message/:id' do
+    message = Message.get(params[:id])
+    message.update(content: params[:message])
 
     redirect '/'
   end
 
-  post '/delete' do
-    # session[:message].destroy
-    $message.destroy
+  post '/delete/:id' do
+    message = Message.get(params[:id])
+    message.destroy
 
     redirect '/'
   end

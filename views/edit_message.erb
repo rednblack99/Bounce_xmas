@@ -1,6 +1,6 @@
 <p> What should the message say? </p>
 
-<form action="/update_message" method="post">
+<form action=<%="/update_message/#{@message.id}"%> method="post">
   <input type="text" name="message">
   <input type="submit" value="Update">
 </form>
