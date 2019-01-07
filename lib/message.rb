@@ -1,4 +1,5 @@
 require 'data_mapper'
+require './lib/tag'
 
 # Creates the table of stored messages
 class Message
@@ -18,15 +19,5 @@ class Message
     created_at.strftime('%d-%m-%Y | %H:%M')
   end
 
-
 end
 
-class Tag
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :tag, Text
-
-  belongs_to :message
-
-end

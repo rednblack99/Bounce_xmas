@@ -69,6 +69,14 @@
         null,
         null
       ],
+      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/tag_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/testing_infrastructure_spec.rb": [
         1,
         null,
@@ -80,6 +88,6 @@
         null
       ]
     },
-    "timestamp": 1546875879
+    "timestamp": 1546880051
   }
 }
