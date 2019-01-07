@@ -8,7 +8,8 @@ require 'pry'
 
 # Runs web app
 class Bounce < Sinatra::Base
-  use Rack::Session::Cookie, :key => "rack.session", :path => "/backend"
+  # use Rack::Session::Cookie, :key => "rack.session", :path => "/backend"
+  enable :method_override
   
   get '/' do
     @messages = Message.all
@@ -32,14 +33,14 @@ class Bounce < Sinatra::Base
     erb(:edit_message)
   end
 
-  post '/update_message/:id' do
+  put '/update_message/:id' do
     message = Message.get(params[:id])
     message.update(content: params[:message])
 
     redirect '/'
   end
 
-  post '/delete/:id' do
+  delete '/delete/:id' do
     message = Message.get(params[:id])
     message.destroy
 

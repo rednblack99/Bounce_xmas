@@ -1,6 +1,7 @@
 <p> What should the message say? </p>
 
 <form action=<%="/update_message/#{@message.id}"%> method="post">
+  <input name='_method' type='hidden' value='PUT'/>
   <input type="text" name="message">
   <input type="submit" value="Update">
 </form>

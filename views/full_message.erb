@@ -10,6 +10,7 @@
   </form>
 
   <form action=<%="/delete/#{@message.id}"%> method="post">
+    <input name='_method' type='hidden' value='DELETE'/>
     <input type="submit" value="Delete message?">
   </form>
 </p>
