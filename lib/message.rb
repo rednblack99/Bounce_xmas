@@ -8,6 +8,8 @@ class Message
   property :content, Text
   property :created_at, DateTime
 
+  has n, :tags
+
   def preview
     content[0..19]
   end
@@ -15,4 +17,16 @@ class Message
   def display_time
     created_at.strftime('%d-%m-%Y | %H:%M')
   end
+
+
+end
+
+class Tag
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :tag, Text
+
+  belongs_to :message
+
 end
