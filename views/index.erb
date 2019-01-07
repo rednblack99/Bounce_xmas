@@ -2,6 +2,12 @@
 <h1>Welcome to Bounce</h1>
 <img src="https://media.giphy.com/media/LpALgGQNZLzdm/giphy.gif" alt="Bouncy" height="300">
 
+<% @tags.reverse.each do |tag| %>
+	<div>
+	<%= tag.tag %>
+	</div>
+<% end %>
+
   <% @messages.reverse.each do |message| %>
   <div>
     <%= message.display_time %>: <a href=<%="/full_message/#{message.id}"%>><%= message.preview %></a> 

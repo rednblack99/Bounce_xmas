@@ -3,7 +3,6 @@ ENV['RACK_ENV'] ||= 'development'
 require 'sinatra/base'
 require './lib/message'
 require './config/data_mapper'
-
 require 'pry'
 
 # Runs web app
@@ -13,13 +12,13 @@ class Bounce < Sinatra::Base
   
   get '/' do
     @messages = Message.all
-
+    @tags = Tag.all
     erb(:index)
   end
 
   post '/send_message' do
-    Message.create(content: params[:message])
-
+    @message = Message.create(content: params[:message])
+    Tag.create(tag: params[:tag], message_id: @message.id )
     redirect '/'
   end
 
@@ -36,14 +35,14 @@ class Bounce < Sinatra::Base
   put '/update_message/:id' do
     message = Message.get(params[:id])
     message.update(content: params[:message])
-
     redirect '/'
   end
 
   delete '/delete/:id' do
     message = Message.get(params[:id])
     message.destroy
-
+    # tag = Tag.get!(message_id: message.id)
+    # tag.destroy
     redirect '/'
   end
 

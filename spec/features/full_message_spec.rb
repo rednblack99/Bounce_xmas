@@ -27,6 +27,7 @@ feature 'Full message' do
   scenario 'Deletes the message' do
     visit '/'
     fill_in :message, with: 'To be deleted'
+    fill_in :tag, with: 'delete tag pls'
     click_button 'Send'
     click_link('To be deleted')
     click_button 'Delete'

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/full_message_spec.rb": [
+      "/Users/joaoabbott-gribben/projects/messenger_monday/Bounce_xmas/spec/features/full_message_spec.rb": [
         1,
         1,
         1,
@@ -32,44 +32,6 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/home_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/tag_spec.rb": [
         1,
         1,
         1,
@@ -77,7 +39,54 @@
         null,
         null
       ],
-      "/Users/adamlodowski/Documents/Makers/projects/Week4/messaging_app/message_app/spec/features/testing_infrastructure_spec.rb": [
+      "/Users/joaoabbott-gribben/projects/messenger_monday/Bounce_xmas/spec/features/home_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/joaoabbott-gribben/projects/messenger_monday/Bounce_xmas/spec/features/tag_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/joaoabbott-gribben/projects/messenger_monday/Bounce_xmas/spec/features/testing_infrastructure_spec.rb": [
         1,
         null,
         1,
@@ -88,6 +97,6 @@
         null
       ]
     },
-    "timestamp": 1546880051
+    "timestamp": 1546884210
   }
 }
