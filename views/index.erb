@@ -2,15 +2,14 @@
 <h1>Welcome to Bounce</h1>
 <img src="https://media.giphy.com/media/LpALgGQNZLzdm/giphy.gif" alt="Bouncy" height="300">
 
-<% @tags.reverse.each do |tag| %>
-	<div>
-	<%= tag.tag %>
-	</div>
-<% end %>
-
-  <% @messages.reverse.each do |message| %>
+	<% @messages.reverse.each do |message| %>
   <div>
-    <%= message.display_time %>: <a href=<%="/full_message/#{message.id}"%>><%= message.preview %></a> 
+    <a href=<%="/full_message/#{message.id}"%>><%= message.preview %></a> : <%= message.display_time %> 
+    Tag: 
+    <% @tags.reverse.each do |tag| %>
+    <%= tag.tag %>
+    <% end %>
+
   </div>
   <% end %>
 
@@ -19,3 +18,8 @@
   <input type="text" name="tag" id="tag">
   <input type="submit" value="Send">
 </form>
+
+
+
+
+

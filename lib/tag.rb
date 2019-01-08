@@ -7,3 +7,6 @@ class Tag
   belongs_to :message
 
 end
+
+# <%= message.tags %> -->
+# <%= tag.message_id[message.id] %> 

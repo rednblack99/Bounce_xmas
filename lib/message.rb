@@ -9,7 +9,12 @@ class Message
   property :content, Text
   property :created_at, DateTime
 
-  has n, :tags
+  has n, :tags, constraint: :destroy
+
+  before :destroy do 
+    tags.destroy
+  end
+
 
   def preview
     content[0..19]

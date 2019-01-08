@@ -47,3 +47,8 @@ class Bounce < Sinatra::Base
   end
 
 end
+
+
+# 1 destrroy dependsnt
+# 2 destrot associationd
+# a way to destroy dependant records
