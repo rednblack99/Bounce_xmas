@@ -5,20 +5,19 @@
 	<% @messages.reverse.each do |message| %>
   <div>
     <a href=<%="/full_message/#{message.id}"%>><%= message.preview %></a> : <%= message.display_time %> 
-    Tag: 
+    
     <% @tags.reverse.each do |tag| %>
     <%= tag.tag %>
+
+    <% end %>
     <% end %>
 
-  </div>
-  <% end %>
-
+  </div>  
 <form action="/send_message" method="post">
   <input type="text" name="message">
   <input type="text" name="tag" id="tag">
   <input type="submit" value="Send">
 </form>
-
 
 
 

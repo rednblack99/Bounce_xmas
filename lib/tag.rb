@@ -8,5 +8,10 @@ class Tag
 
 end
 
+
 # <%= message.tags %> -->
 # <%= tag.message_id[message.id] %> 
+
+
+# Tag: <%= @tags.each do |tag|
+#       (:message_id => message.id) %>
