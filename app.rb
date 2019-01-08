@@ -12,7 +12,6 @@ class Bounce < Sinatra::Base
   
   get '/' do
     @messages = Message.all
-    @tags = Tag.all
     erb(:index)
   end
 
